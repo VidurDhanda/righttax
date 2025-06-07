@@ -1,0 +1,138 @@
+
+:root {
+    --bg-light: #f5f1f8;
+    --bg-dark: #1f1a24;
+    --text-light: #2e073f;
+    --text-dark: #f5f1f3;
+    --accent-light: #c6b2de;
+    --accent-dark: #682bd7;
+    --btn-light: #a37cf0;
+    --btn-dark: #845ec2;
+    --btn-hover-light: #8f65d8;
+    --btn-hover-dark: #a97fff;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+}
+
+.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+.navbar {
+    background-color: var(--accent-light);
+    padding: 20px 40px;
+    text-align: center;
+    position: relative;
+}
+.dark-mode .navbar {
+    background-color: var(--accent-dark);
+}
+.logo {
+    height: 60px;
+}
+
+.toggle-dark {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: 1px solid #888;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: inherit;
+}
+
+.home {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.whatsapp-query h1 {
+    font-size: 2.5rem;
+    color: #682bd7;
+}
+.dark-mode .whatsapp-query h1 {
+    color: #c6b2de;
+}
+.whatsapp-query p {
+    margin-bottom: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+button {
+    background-color: var(--btn-light);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.dark-mode button {
+    background-color: var(--btn-dark);
+}
+button:hover {
+    background-color: var(--btn-hover-light);
+}
+.dark-mode button:hover {
+    background-color: var(--btn-hover-dark);
+}
+
+.about {
+    margin-top: 60px;
+    background-color: #f5effb;
+    padding: 30px;
+    border-radius: 10px;
+}
+.dark-mode .about {
+    background-color: #2e1f49;
+}
+.about h2 {
+    color: #682bd7;
+    font-size: 1.8rem;
+}
+.dark-mode .about h2 {
+    color: #a97fff;
+}
+
+.footer {
+    background-color: var(--accent-light);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
+.dark-mode .footer {
+    background-color: var(--accent-dark);
+    color: #ccc;
+}
+
+.logo-text {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #682bd7;
+}
+.dark-mode .logo-text {
+    color: #c6b2de;
+}

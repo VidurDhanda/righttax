@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RightTax</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-text">RightTax</div>
+        <button class="toggle-dark" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </header>
+
+    <main class="home">
+        <section class="whatsapp-query">
+            <h1>Ask Your Tax Question</h1>
+            <p>We simplify tax for you. Send us your query below and get help directly on WhatsApp.</p>
+            <form id="waForm">
+                <input type="text" id="name" placeholder="Your Name" required />
+                <input type="text" id="question" placeholder="Your Tax Question" required />
+                <button type="submit">Send via WhatsApp</button>
+            </form>
+        </section>
+
+        <section class="about">
+            <h2>About RightTax</h2>
+            <p>
+                RightTax is a modern tax consultation platform that makes income tax filing easier for individuals and NRIs.
+                With a focus on clarity, speed, and accessibility, our mission is to demystify taxes for everyone.
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="disclaimer">
+            Disclaimer: The information provided on this website is for general informational purposes only and should not be construed as legal or financial advice. Always consult with a qualified tax consultant for personalized guidance.
+        </p>
+        <p class="copyright">
+            &copy; 2025 RightTax. All rights reserved.
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById("waForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value.trim();
+            const question = document.getElementById("question").value.trim();
+            const message = encodeURIComponent(`Hi, my name is ${name}. I have a tax question: ${question}`);
+            window.open(`https://wa.me/917838096409?text=${message}`, "_blank");
+        });
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
